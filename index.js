@@ -1,11 +1,13 @@
-let Moodscore = 0;
+// Memory 
+let Moodscore = 0; // reassignable variable for later use just setting the record
 
 const CheerUp = document.getElementById("Increase");
 const Calmdown = document.getElementById("Decrease");
 const ResetMood = document.getElementById("Reset");
 const MoodScore = document.getElementById("Moodscore");
+// A NON resassinable variable used to create variables from Ids
 
-function updateMoodScore() {
+function updateMoodScore() { // A simple fuction to make a variable for emoji and give me commands based on which number
     let emoji = "😐";
     if (Moodscore >= 10) {
         emoji = "🤩"  
@@ -30,8 +32,8 @@ function updateMoodScore() {
         emoji = "😐"
     }
 
-    MoodScore.textContent = Moodscore + " " + emoji;
-}
+    MoodScore.textContent = Moodscore + " " + emoji; // and here is that the MoodScore on the html page it will show Mood score on the html page as moodscore
+} 
 
 function MoodIncrease () {
     Moodscore++;
