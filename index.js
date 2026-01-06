@@ -23,8 +23,11 @@ function updateMoodScore() {
     else if (Moodscore <= -5) {
         emoji = "😢"
     }
-    else if (Moodscore <= 0) {
+    else if (Moodscore < 0) {
         emoji = "☹️"
+    }
+    else if (Moodscore = 0) {
+        emoji = "😐"
     }
 
     MoodScore.textContent = Moodscore + " " + emoji;
