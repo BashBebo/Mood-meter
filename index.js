@@ -7,22 +7,27 @@ const MoodScore = document.getElementById("Moodscore");
 
 function updateMoodScore() {
     let emoji = "😐";
-    if (Moodscore > 0) {
-        emoji = "🙂"
+    if (Moodscore >= 10) {
+        emoji = "🤩"  
     }
-    else if (MoodScore >= 5) {
+    else if (Moodscore >= 5) {
         emoji = "😄"
     }
-
-    else if (Moodscore < 0) {
-        emoji = "☹️"
+    else if (Moodscore > 0) {
+        emoji = "🙂"
+    }
+    else if (Moodscore <= -10) {
+        emoji = "😭"
     }
     
     else if (Moodscore <= -5) {
         emoji = "😢"
     }
+    else if (Moodscore <= 0) {
+        emoji = "☹️"
+    }
 
-    MoodScore.textContent = Moodscore + "" + emoji;
+    MoodScore.textContent = Moodscore + " " + emoji;
 }
 
 function MoodIncrease () {
